@@ -94,8 +94,3 @@ El script ya viene configurado para exportar un video en formato **MP4 (H.264)**
 ---
 ## 🖼️ Resultado Visual
 <img width="562" height="341" alt="image" src="https://github.com/user-attachments/assets/4a419115-2cce-49c3-9304-10a2912ff4cf" />
-
-## 📺 Demostración del Escenario
-A continuación se muestra el recorrido procedural generado por el script, donde se observa la transición entre el tramo recto y el curvo con iluminación dinámica.
-
-![Ver video de demostración](media/demostracion.mp4)
