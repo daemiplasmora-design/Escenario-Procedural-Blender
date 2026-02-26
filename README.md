@@ -102,4 +102,5 @@ Cuando subas esto, puedes añadir el video `.mp4` en la carpeta `/renders` y lue
 ¿Te gustaría que te ayude a redactar una conclusión técnica sobre por qué es mejor usar scripting en lugar de modelado manual en ingeniería?
 
 ## 🖼️ Resultado Visual
-*(Aquí puedes insertar la captura de pantalla de tu Blender)*
+<img width="562" height="341" alt="image" src="https://github.com/user-attachments/assets/4a419115-2cce-49c3-9304-10a2912ff4cf" />
+
