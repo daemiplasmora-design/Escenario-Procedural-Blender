@@ -91,16 +91,11 @@ El script ya viene configurado para exportar un video en formato **MP4 (H.264)**
 
 **Plascencia Mora David Emiliano**
 *Materia: Graficación, 4to Semestre.*
-
 ---
-
-### Un consejo para tu Git:
-
-Cuando subas esto, puedes añadir el video `.mp4` en la carpeta `/renders` y luego, en este mismo README, puedes poner:
-`![Resultado del Escenario](renders/escenario_final.mp4)`
-
-¿Te gustaría que te ayude a redactar una conclusión técnica sobre por qué es mejor usar scripting en lugar de modelado manual en ingeniería?
-
 ## 🖼️ Resultado Visual
 <img width="562" height="341" alt="image" src="https://github.com/user-attachments/assets/4a419115-2cce-49c3-9304-10a2912ff4cf" />
 
+## 📺 Demostración del Escenario
+A continuación se muestra el recorrido procedural generado por el script, donde se observa la transición entre el tramo recto y el curvo con iluminación dinámica.
+
+![Ver video de demostración](media/demostracion.mp4)
