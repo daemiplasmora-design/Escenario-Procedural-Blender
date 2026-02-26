@@ -1,29 +1,105 @@
-# Escenario-Procedural-Blender
-Este repositorio contiene la implementación de una práctica de la materia de **Graficación** (4to Semestre de Ingeniería en Sistemas Computacionales). [cite_start]El objetivo es construir un escenario tridimensional de forma procedural utilizando scripting en Blender, aplicando conceptos de transformaciones y modelos de color[cite: 1, 2].
+# Escenario Procedural 3D: Animación y Geometría en Blender
 
-## 🚀 Descripción del Proyecto
-El proyecto automatiza la creación de un pasillo arquitectónico para videojuegos. [cite_start]Se enfoca en la gestión de objetos en memoria y la aplicación de algoritmos para la generación de geometría dinámica[cite: 5, 36].
+## 📝 Descripción del Proyecto
 
-## 🛠️ Conceptos de Graficación Aplicados
+Este proyecto consiste en la generación procedural de un escenario 3D automatizado mediante Python y la API de Blender (`bpy`). Como parte de la materia de **Graficación** (4to Semestre de Ingeniería en Sistemas), se implementó un sistema que construye un pasillo con tramos rectos y curvos, aplicando transformaciones lineales y modelos de iluminación dinámica.
 
-De acuerdo al programa de la materia, se implementaron los siguientes temas:
+El objetivo principal es demostrar la importancia de la gestión de objetos en memoria y la automatización de procesos geométricos.
 
-* [cite_start]**Modelos de Color (Tema 1.4):** Uso del modelo **RGB** para la creación de materiales y definición de colores difusos (RGBA)[cite: 10, 15, 16].
-* **Transformaciones Tridimensionales:**
-    * [cite_start]**Traslación (Tema 3.3.1):** Posicionamiento calculado de cubos en los ejes X, Y y Z para formar la estructura del pasillo[cite: 22, 28].
-    * [cite_start]**Escalamiento (Tema 3.3.2):** Ajuste de dimensiones en el eje Z para variar la altura de los bloques y en los planos para el suelo[cite: 34, 49, 50].
-* [cite_start]**Relleno de Polígonos (Tema 4.1):** Aplicación de materiales a las mallas de los objetos creados[cite: 30, 31].
-* [cite_start]**Iluminación Básica (Tema 4.2):** Implementación de una luz de tipo "Point" con intensidad controlada para dar realismo a la escena[cite: 52, 54, 57].
+---
 
-## 💻 Tecnologías Utilizadas
-* **Blender:** Motor de renderizado y modelado 3D.
-* [cite_start]**Python (bpy):** API de Blender para la manipulación procedural de datos[cite: 7].
+## 🛠️ Fundamentos de Graficación Aplicados
 
-## 📋 Instrucciones de Uso
-1. Abre Blender (Versión recomendada: 3.0 o superior).
-2. Ve a la pestaña de **Scripting**.
-3. [cite_start]Crea un nuevo archivo de texto y pega el código de `escenario.py` que se encuentra en este repositorio[cite: 68, 91].
-4. Haz clic en **Run Script** para generar el escenario automáticamente.
+### 1. Modelos de Color (Tema 1.4)
+
+Se utilizó el **modelo RGB** para la definición de materiales. A través de una función orientada a objetos, se crearon materiales dinámicos para los polígonos del escenario:
+
+* 
+**Material Base**: Un tono gris oscuro para elementos estructurales.
+
+
+* 
+**Material de Acento**: Un color neón (naranja rojizo) para resaltar detalles visuales y la alternancia de patrones.
+
+
+
+### 2. Transformaciones Tridimensionales (Tema 3.3)
+
+La construcción del escenario se basa en el cálculo de matrices de transformación aplicadas mediante scripting:
+
+* 
+**Traslación (3.3.1)**: Ubicación precisa de cubos en los ejes X, Y y Z para formar el pasillo lineal.
+
+
+* 
+**Escalamiento (3.3.2)**: Modificación de las dimensiones de los bloques para generar variedad visual y definir la superficie del suelo.
+
+
+* 
+**Rotación**: Implementada en el tramo curvo para que los objetos se orienten de forma tangencial a la trayectoria.
+
+
+
+### 3. Geometría Procedural y Trigonometría
+
+A diferencia de un modelado manual, el tramo curvo se generó utilizando algoritmos matemáticos:
+
+* **Funciones Trigonométricas**: Uso de Seno ($sin$) y Coseno ($cos$) para determinar la posición de los bloques en un arco circular.
+* 
+**Ciclos de Iteración**: Automatización de la geometría para optimizar el código y evitar la repetición manual de tareas.
+
+
+
+---
+
+## 🎥 Animación y Recorrido Virtual
+
+El proyecto incluye un recorrido de cámara animado de **250 fotogramas** configurado directamente desde el script:
+
+* **Trayectoria Híbrida**: Transición fluida entre un movimiento rectilíneo y uno circular.
+* **Interpolación Lineal**: Se forzó la interpolación de los "Keyframes" a tipo **Linear** para evitar tirones y asegurar un movimiento constante.
+* **Simulación Humana**: Altura de cámara fijada en $Z=1.5$ para simular la perspectiva de un personaje en primera persona.
+
+---
+
+## 🚀 Cómo Ejecutar el Proyecto
+
+1. Descarga el archivo `Import.py` de este repositorio.
+2. Abre **Blender** (Versión 3.0 o superior).
+3. Dirígete al espacio de trabajo de **Scripting**.
+4. Haz clic en `Open` y selecciona el archivo `.py`.
+5. Pulsa el botón **Run Script**.
+
+### Renderizado de Video
+
+El script ya viene configurado para exportar un video en formato **MP4 (H.264)**. Para generarlo:
+
+* Presiona `Ctrl + F12`.
+* El video se guardará automáticamente en la carpeta de tu proyecto con el nombre `escenario_final.mp4`.
+
+---
+
+## 📂 Estructura del Repositorio
+
+* `/scripts`: Código fuente en Python (`.py`).
+* `/renders`: Video de demostración y capturas de pantalla.
+* `/docs`: Documentación adicional y PDF de la práctica.
+
+---
+
+## 👨‍💻 Autor
+
+**Plascencia Mora David Emiliano**
+*Materia: Graficación, 4to Semestre.*
+
+---
+
+### Un consejo para tu Git:
+
+Cuando subas esto, puedes añadir el video `.mp4` en la carpeta `/renders` y luego, en este mismo README, puedes poner:
+`![Resultado del Escenario](renders/escenario_final.mp4)`
+
+¿Te gustaría que te ayude a redactar una conclusión técnica sobre por qué es mejor usar scripting en lugar de modelado manual en ingeniería?
 
 ## 🖼️ Resultado Visual
 *(Aquí puedes insertar la captura de pantalla de tu Blender)*
